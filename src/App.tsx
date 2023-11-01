@@ -1,9 +1,25 @@
-import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import NavBar from './components/NavBar';
 import GenForm from './components/GenForm';
 import ResultViewer from './components/ResultViewer';
+import { useState } from 'react';
+import { Prompt } from './types';
 
 function App() {
+
+  const defaultPrompt: Prompt = {
+    content: "Northlights, Sweeden, Hiking",
+    language: "English",
+    numOfParas: 3,
+  }
+
+  const [prompt, setPrompt] = useState<Prompt>(defaultPrompt)
+
+  const handlePrompt = (prompt: Prompt) => {
+    console.log(prompt)
+    setPrompt(prompt)
+  }
+
   return (
     <>
       <NavBar />
@@ -17,11 +33,12 @@ function App() {
         <Row>
 
           <Col>
-            <GenForm />
+            <GenForm handlePrompt={handlePrompt} />
           </Col>
 
           <Col>
             <ResultViewer />
+            <p>{JSON.stringify(prompt)}</p>
           </Col>
         </Row>
       </Container>

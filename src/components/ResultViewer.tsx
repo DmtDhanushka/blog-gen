@@ -1,6 +1,8 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+
+}
 
 const ResultViewer = (props: Props) => {
     return (
