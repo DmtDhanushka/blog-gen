@@ -6,3 +6,8 @@ export type Prompt = {
     numOfParas: number;
     language: Language;
 }
+
+export type ResponseText = {
+    title: string;
+    paragraphs: string[];
+}
