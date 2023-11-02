@@ -12,7 +12,7 @@ const GenForm = (props: Props) => {
 
   const languageList: Language[] = ["English", "Spanish", "French", "Swedish"];
 
-  const [content, setContent] = useState("Northlights, Sweeden, Hiking");
+  const [content, setContent] = useState("Sweeden, Hiking, Snow sports, 400$, Kids activities, honeymoon");
   const [language, setLanguage] = useState<Language>("English")
   const [numOfParas, setNumOfParas] = useState<number>(3)
   const [loading, setLoading] = useState<boolean>(false);
