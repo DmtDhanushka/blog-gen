@@ -33,7 +33,7 @@ const GenForm = (props: Props) => {
       console.log("== Chat Completions Sample ==", messages);
 
       const client = new OpenAIClient(endpoint, new AzureKeyCredential(azureApiKey));
-      const deploymentId = "generative-model2223";
+      const deploymentId = import.meta.env.VITE_GPT_DEPLOYMENT_NAME;
       const result = await client.getChatCompletions(deploymentId, messages);
 
       const content = result.choices[0].message?.content;
