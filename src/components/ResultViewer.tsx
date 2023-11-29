@@ -1,4 +1,3 @@
-import React from 'react'
 import { ResponseText } from '../types'
 
 type Props = {
